@@ -1,0 +1,10 @@
+[project]
+name = "llama-mcp-agent"
+version = "0.1.0"
+description = "llamaindex with MCP"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "llama-index>=0.12.10",
+    "mcp[cli]>=1.2.0",
+]
