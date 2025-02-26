@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = "==3.10.*"
 
 [[package]]
@@ -425,6 +426,18 @@ wheels = [
 ]
 
 [[package]]
+name = "importlib-metadata"
+version = "8.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "zipp" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/33/08/c1395a292bb23fd03bdf572a1357c5a733d3eecbab877641ceacab23db6e/importlib_metadata-8.6.1.tar.gz", hash = "sha256:310b41d755445d74569f993ccfc22838295d9fe005425094fad953d7f15c8580", size = 55767 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/79/9d/0fb148dc4d6fa4a7dd1d8378168d9b4cd8d4560a6fbf6f0121c5fc34eb68/importlib_metadata-8.6.1-py3-none-any.whl", hash = "sha256:02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e", size = 26971 },
+]
+
+[[package]]
 name = "jinja2"
 version = "3.1.5"
 source = { registry = "https://pypi.org/simple" }
@@ -512,6 +525,28 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/53/2a/15fd4c3600476ecd1e36bfca06c80dc9e0ec0606bbf66155e07752d13fa9/lancedb-0.19.0-cp39-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:ecc05ac68a7abcc4299dde821035275642492cbf136b0f59fa3101e20d3686f0", size = 30136673 },
     { url = "https://files.pythonhosted.org/packages/a2/43/b30338ccc61dfb95f3ee59918b61b0e545e67456ed89dc3155ac640e0b8e/lancedb-0.19.0-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:83bc158e7c543409d6eb90fee068a8621ebfdcd5ef2781639ff37fd1ec18ceda", size = 32335933 },
     { url = "https://files.pythonhosted.org/packages/4e/d0/2eb0d51aedc86b9bf27d214c9a4620eb4dfb78977dc1650fba30109ffb4c/lancedb-0.19.0-cp39-abi3-win_amd64.whl", hash = "sha256:1767b47427f6b0d9a1cdfb9fcd01ea18273050454af4f48dfa39e6aa886f7e06", size = 30000319 },
+]
+
+[[package]]
+name = "litellm"
+version = "1.61.17"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aiohttp" },
+    { name = "click" },
+    { name = "httpx" },
+    { name = "importlib-metadata" },
+    { name = "jinja2" },
+    { name = "jsonschema" },
+    { name = "openai" },
+    { name = "pydantic" },
+    { name = "python-dotenv" },
+    { name = "tiktoken" },
+    { name = "tokenizers" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/15/6b/7bbe3df4474017ecf871ecb5e6adc6347c6deb0e7693da4accbb83aedfd8/litellm-1.61.17.tar.gz", hash = "sha256:eaab989c090ccc094b41c3fdf27d1df7f6fb25e091ab0ce48e0f3079f1e51ff5", size = 6573300 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3d/6f/f0c56c21f89432b0405b7e2ad0b0f00a7908266c04638bf1986b12ba63da/litellm-1.61.17-py3-none-any.whl", hash = "sha256:ff9137c008cdb421db32defb1fbd1ed546a95167de6d276c61b664582ed4ff60", size = 6886570 },
 ]
 
 [[package]]
@@ -652,6 +687,19 @@ wheels = [
 ]
 
 [[package]]
+name = "llama-index-llms-litellm"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "litellm" },
+    { name = "llama-index-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/a6/1f82167194a27ac4aefa7314c7bcebc87478eed81caca604e1030985b11b/llama_index_llms_litellm-0.3.0.tar.gz", hash = "sha256:06535d11e0ecf347342641aba1de80f06b521f8086614a71a5569e41371fb630", size = 7419 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fa/c5/ba74b47af20283d838fd76a31664e6dfaaf424b05c8194f869c2ed2b441b/llama_index_llms_litellm-0.3.0-py3-none-any.whl", hash = "sha256:b1422cf66d4e9f1e02256de53333ce3cbf46bf57a4c37c2eccbf47500f57ee0e", size = 7872 },
+]
+
+[[package]]
 name = "llama-index-llms-openai"
 version = "0.3.13"
 source = { registry = "https://pypi.org/simple" }
@@ -762,6 +810,20 @@ wheels = [
 ]
 
 [[package]]
+name = "llama-index-tools-mcp"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llama-index-core" },
+    { name = "mcp" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/62/4b/2f5d7c0c4d11829b36b1ec1c65c6c7621b9c2f76b9a7fa779c887dcf9648/llama_index_tools_mcp-0.1.0.tar.gz", hash = "sha256:8a3ef3dd05572e4a34afa947701a36d93ab7230718e2a772228d62c3a01353b3", size = 3847 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f3/f5/08df41636634a23f379580ae71f7d64065f64f4a3a657f96d85ca2c462a3/llama_index_tools_mcp-0.1.0-py3-none-any.whl", hash = "sha256:757a29dec17c32dd2587556e0df7449f6e07d541bb5ccde393e41644d9d21206", size = 4273 },
+]
+
+[[package]]
 name = "llama-index-vector-stores-lancedb"
 version = "0.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -783,8 +845,10 @@ dependencies = [
     { name = "lancedb" },
     { name = "llama-index" },
     { name = "llama-index-embeddings-ollama" },
+    { name = "llama-index-llms-litellm" },
     { name = "llama-index-llms-openai-like" },
     { name = "llama-index-llms-siliconflow" },
+    { name = "llama-index-tools-mcp" },
     { name = "llama-index-vector-stores-lancedb" },
     { name = "mcp", extra = ["cli"] },
     { name = "streamlit" },
@@ -796,8 +860,10 @@ requires-dist = [
     { name = "lancedb", specifier = ">=0.19.0" },
     { name = "llama-index", specifier = ">=0.12.10" },
     { name = "llama-index-embeddings-ollama", specifier = ">=0.5.0" },
+    { name = "llama-index-llms-litellm", specifier = ">=0.3.0" },
     { name = "llama-index-llms-openai-like", specifier = ">=0.3.3" },
     { name = "llama-index-llms-siliconflow", specifier = ">=0.2.1" },
+    { name = "llama-index-tools-mcp", specifier = ">=0.1.0" },
     { name = "llama-index-vector-stores-lancedb", specifier = ">=0.3.0" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.2.0" },
     { name = "streamlit", specifier = ">=1.42.0" },
@@ -1009,7 +1075,7 @@ wheels = [
 
 [[package]]
 name = "openai"
-version = "1.59.6"
+version = "1.64.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -1021,9 +1087,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2e/7a/07fbe7bdabffd0a5be1bfe5903a02c4fff232e9acbae894014752a8e4def/openai-1.59.6.tar.gz", hash = "sha256:c7670727c2f1e4473f62fea6fa51475c8bc098c9ffb47bfb9eef5be23c747934", size = 344915 }
+sdist = { url = "https://files.pythonhosted.org/packages/7b/1d/aae78d8ecc571d672c4a27794a8f248bc46437a22ddcb9c4eb6fd6616c03/openai-1.64.0.tar.gz", hash = "sha256:2861053538704d61340da56e2f176853d19f1dc5704bc306b7597155f850d57a", size = 357058 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/70/45/6de8e5fd670c804b29c777e4716f1916741c71604d5c7d952eee8432f7d3/openai-1.59.6-py3-none-any.whl", hash = "sha256:b28ed44eee3d5ebe1a3ea045ee1b4b50fea36ecd50741aaa5ce5a5559c900cb6", size = 454817 },
+    { url = "https://files.pythonhosted.org/packages/9a/1a/e62718f311daa26d208800976d7944e5ee6d503e1ea474522b2a15a904bb/openai-1.64.0-py3-none-any.whl", hash = "sha256:20f85cde9e95e9fbb416e3cb5a6d3119c0b28308afd6e3cc47bf100623dac623", size = 472289 },
 ]
 
 [[package]]
@@ -1825,4 +1891,13 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/8a/b8/3d16209c2014c2f98a8f658850a57b716efb97930aebf1ca0d9325933731/yarl-1.18.3-cp310-cp310-win32.whl", hash = "sha256:8874027a53e3aea659a6d62751800cf6e63314c160fd607489ba5c2edd753cf6", size = 84309 },
     { url = "https://files.pythonhosted.org/packages/fd/b7/2e9a5b18eb0fe24c3a0e8bae994e812ed9852ab4fd067c0107fadde0d5f0/yarl-1.18.3-cp310-cp310-win_amd64.whl", hash = "sha256:93b2e109287f93db79210f86deb6b9bbb81ac32fc97236b16f7433db7fc437d8", size = 90484 },
     { url = "https://files.pythonhosted.org/packages/f5/4b/a06e0ec3d155924f77835ed2d167ebd3b211a7b0853da1cf8d8414d784ef/yarl-1.18.3-py3-none-any.whl", hash = "sha256:b57f4f58099328dfb26c6a771d09fb20dbbae81d20cfb66141251ea063bd101b", size = 45109 },
+]
+
+[[package]]
+name = "zipp"
+version = "3.21.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3f/50/bad581df71744867e9468ebd0bcd6505de3b275e06f202c2cb016e3ff56f/zipp-3.21.0.tar.gz", hash = "sha256:2c9958f6430a2040341a52eb608ed6dd93ef4392e02ffe219417c1b28b5dd1f4", size = 24545 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/1a/7e4798e9339adc931158c9d69ecc34f5e6791489d469f5e50ec15e35f458/zipp-3.21.0-py3-none-any.whl", hash = "sha256:ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931", size = 9630 },
 ]
